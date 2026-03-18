@@ -3,7 +3,7 @@
 ##  Objective
 To perform network scanning and identify open ports, services, and vulnerabilities.
 
-## 🛠 Tools Used
+##  Tools Used
 - Nmap
 - Kali Linux
 
