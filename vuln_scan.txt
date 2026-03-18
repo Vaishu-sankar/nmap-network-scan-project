@@ -1,0 +1,33 @@
+# Nmap 7.95 scan initiated Wed Mar 18 00:17:01 2026 as: /usr/lib/nmap/nmap --privileged --script=vuln -oN vuln_scan.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000012s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-enum: 
+|_  /server-status/: Potentially interesting folder
+3306/tcp open  mysql
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Anonymous Diffie-Hellman Key Exchange MitM Vulnerability
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use anonymous
+|       Diffie-Hellman key exchange only provide protection against passive
+|       eavesdropping, and are vulnerable to active man-in-the-middle attacks
+|       which could completely compromise the confidentiality and integrity
+|       of any data exchanged over the resulting session.
+|     Check results:
+|       ANONYMOUS DH GROUP 1
+|             Cipher Suite: TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA
+|             Modulus Type: Safe prime
+|             Modulus Source: Unknown/Custom-generated
+|             Modulus Length: 2048
+|             Generator Length: 8
+|             Public Key Length: 2048
+|     References:
+|_      https://www.ietf.org/rfc/rfc2246.txt
+
+# Nmap done at Wed Mar 18 00:17:40 2026 -- 1 IP address (1 host up) scanned in 39.38 seconds

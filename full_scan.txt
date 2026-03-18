@@ -1,0 +1,65 @@
+# Nmap 7.95 scan initiated Wed Mar 18 00:14:12 2026 as: /usr/lib/nmap/nmap --privileged -A -p- -oN full_scan.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000076s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http    Apache httpd 2.4.66 ((Debian))
+|_http-server-header: Apache/2.4.66 (Debian)
+|_http-title: Apache2 Debian Default Page: It works
+3306/tcp open  mysql?
+| ssl-cert: Subject: commonName=MariaDB Server
+| Not valid before: 2026-03-17T17:44:02
+|_Not valid after:  2036-03-14T17:44:02
+| mysql-info: 
+|   Protocol: 10
+|   Version: 11.8.6-MariaDB-2 from Debian
+|   Thread ID: 94
+|   Capabilities flags: 65534
+|   Some Capabilities: ConnectWithDatabase, SupportsLoadDataLocal, SupportsTransactions, Speaks41ProtocolOld, Support41Auth, DontAllowDatabaseTableColumn, IgnoreSigpipes, IgnoreSpaceBeforeParenthesis, SupportsCompression, SwitchToSSLAfterHandshake, ODBCClient, FoundRows, Speaks41ProtocolNew, LongColumnFlag, InteractiveClient, SupportsMultipleResults, SupportsAuthPlugins, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: <&HyI>>X$GyLM!Z"97IH
+|_  Auth Plugin Name: mysql_native_password
+|_ssl-date: TLS randomness does not represent time
+| fingerprint-strings: 
+|   GenericLines: 
+|     11.8.6-MariaDB-2 from Debian
+|     c&0_n++4
+|     e!o0@2v}3"NC
+|     mysql_native_password
+|     #HY000Proxy header is not accepted from 127.0.0.1
+|   LDAPBindReq: 
+|     11.8.6-MariaDB-2 from Debian
+|     MR7ZBxV&
+|     Wf{W"Cg`*M&u
+|     mysql_native_password
+|   NULL: 
+|     11.8.6-MariaDB-2 from Debian
+|     c&0_n++4
+|     e!o0@2v}3"NC
+|     mysql_native_password
+|   afp: 
+|     11.8.6-MariaDB-2 from Debian
+|     <l+0Lnh<
+|     54C4z-ne1bz_
+|_    mysql_native_password
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.95%I=7%D=3/18%Time=69BA269D%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,64,"`\0\0\0\n11\.8\.6-MariaDB-2\x20from\x20Debian\0A\0\0\0c&0_n\+\+4
+SF:\0\xfe\xff-\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\0e!o0@2v}3\"NC\0mysql_na
+SF:tive_password\0")%r(GenericLines,9C,"`\0\0\0\n11\.8\.6-MariaDB-2\x20fro
+SF:m\x20Debian\0A\0\0\0c&0_n\+\+4\0\xfe\xff-\x02\0\xff\x81\x15\0\0\0\0\0\0
+SF:=\0\0\0e!o0@2v}3\"NC\0mysql_native_password\x004\0\0\x01\xffj\x04#HY000
+SF:Proxy\x20header\x20is\x20not\x20accepted\x20from\x20127\.0\.0\.1")%r(LD
+SF:APBindReq,64,"`\0\0\0\n11\.8\.6-MariaDB-2\x20from\x20Debian\0R\0\0\0MR7
+SF:ZBxV&\0\xfe\xff-\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\0Wf{W\"Cg`\*M&u\0my
+SF:sql_native_password\0")%r(afp,64,"`\0\0\0\n11\.8\.6-MariaDB-2\x20from\x
+SF:20Debian\0\\\0\0\0<l\+0Lnh<\0\xfe\xff-\x02\0\xff\x81\x15\0\0\0\0\0\0=\0
+SF:\0\x0054C4z-ne1bz_\0mysql_native_password\0");
+Device type: general purpose
+Running: Linux 5.X|6.X
+OS CPE: cpe:/o:linux:linux_kernel:5 cpe:/o:linux:linux_kernel:6
+OS details: Linux 5.0 - 6.2
+Network Distance: 0 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar 18 00:14:34 2026 -- 1 IP address (1 host up) scanned in 21.79 seconds
